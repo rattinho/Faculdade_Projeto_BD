@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
